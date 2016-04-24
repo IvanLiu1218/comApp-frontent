@@ -60,7 +60,8 @@ module.exports = function (grunt) {
           '<%= yeoman.app %>/{,*/}*.html',
           '.tmp/styles/{,*/}*.css',
           '.tmp/scripts/{,*/}*.js',
-          '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+          '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+          '<%= yeoman.app %>/locales/{,*/}*.json'
         ]
       }
     },
@@ -215,7 +216,7 @@ module.exports = function (grunt) {
         src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
         ignorePath: /(\.\.\/){1,2}bower_components\//
       }
-    }, 
+    },
     // Compiles TypeScript to JavaScript
     typescript: {
       base: {
@@ -249,7 +250,16 @@ module.exports = function (grunt) {
         }
       }
     },
-    
+
+    jsonlint: {
+      locales: {
+        src: [ 'app/locales/**/*.json' ]
+      }
+    },
+
+    yamllint: {
+      src: ['app/locales/**/*.yaml']
+    },
 
     // Compiles Sass to CSS and generates necessary files if requested
     compass: {
@@ -544,4 +554,7 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+  grunt.loadNpmTasks('grunt-jsonlint');
+  grunt.loadNpmTasks('grunt-yamllint');
 };

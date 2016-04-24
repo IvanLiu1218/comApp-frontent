@@ -5,14 +5,14 @@
       <md-content layout="column">
         <img src="images/logo.png" class="login-logo" />
         <md-input-container class="login-username">
-          <label>Username:</label>
+          <label translate>{{'comApp.login.username'}}</label>
           <input ng-model="loginController.username" name="username" required />
         </md-input-container>
         <md-input-container class="login-password">
-          <label>Password:</label>
+          <label translate>{{'comApp.login.password'}}</label>
           <input ng-model="loginController.password" name="password" required />
         </md-input-container>
-        <md-button class="md-raised login-button" ng-click="" flex>Login</md-button>
+        <md-button class="md-raised login-button" ng-click="" translate="comApp.login.loginButton"></md-button>
       </md-content>
     </form>
   </md-content>

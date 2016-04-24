@@ -12,7 +12,8 @@ angular.module('comApp', [
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngMaterial'
+    'ngMaterial',
+    'pascalprecht.translate'
   ])
   .config(($routeProvider:ng.route.IRouteProvider) => {
     $routeProvider

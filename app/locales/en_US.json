@@ -1,0 +1,10 @@
+{
+  "test": "text-code",
+  "comApp": {
+    "login": {
+      "username": "Username",
+      "password": "Password",
+      "loginButton": "Login"
+    }
+  }
+}

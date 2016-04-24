@@ -40,5 +40,11 @@
   },
   "scripts": {
     "test": "grunt test"
+  },
+  "dependencies": {
+    "grunt-jsonlint": "^1.0.7",
+    "grunt-yaml": "^0.4.2",
+    "grunt-yamllint": "^0.2.0",
+    "yaml-to-json": "^0.3.0"
   }
 }

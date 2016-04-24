@@ -1,0 +1,5 @@
+comApp:
+  login:
+    username: "用户名"
+    password: "登录密码"
+    loginButton: "登录"

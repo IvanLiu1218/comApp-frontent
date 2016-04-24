@@ -31,6 +31,9 @@
     },
     "angular-material/angular-material.d.ts": {
       "commit": "2d448c0a3152e8871521848c5c2c61ab4e2a2cc9"
+    },
+    "angular-translate/angular-translate.d.ts": {
+      "commit": "2d448c0a3152e8871521848c5c2c61ab4e2a2cc9"
     }
   }
 }

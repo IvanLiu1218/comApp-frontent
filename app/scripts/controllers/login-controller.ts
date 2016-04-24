@@ -23,8 +23,20 @@ module comApp {
 
 angular.module('comApp')
   .controller(comApp.controllerName, comApp.LoginController)
-  .config(($mdThemingProvider) => {
+  .config(($mdThemingProvider, $translateProvider) => {
     $mdThemingProvider.theme('docs-dark', 'default')
                       .primaryPalette('yellow')
                       .dark();
+    $translateProvider.useStaticFilesLoader({
+        prefix: '/locales/',
+        suffix: '.json'
+    });
+    $translateProvider.registerAvailableLanguageKeys(['en_US', 'zh_CN'], {
+        'en_US': 'en_US',
+        'zh_CN': 'zh_CN'
+      }
+    );
+    $translateProvider.preferredLanguage('zh_CN');
+    //$translateProvider.determinePreferredLanguage();
+    //$translateProvider.fallbackLanguage('en');
   });
