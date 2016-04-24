@@ -12,6 +12,9 @@ module comApp {
 
   export class LoginController {
 
+    username: string;
+    password: string;
+
     constructor (private $scope: ILoginControllerScope) {
       this.$scope.loginController = this;
     }
@@ -19,4 +22,9 @@ module comApp {
 }
 
 angular.module('comApp')
-  .controller(comApp.controllerName, comApp.LoginController);
+  .controller(comApp.controllerName, comApp.LoginController)
+  .config(($mdThemingProvider) => {
+    $mdThemingProvider.theme('docs-dark', 'default')
+                      .primaryPalette('yellow')
+                      .dark();
+  });

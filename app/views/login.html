@@ -1,4 +1,19 @@
 <!-- login.html -->
-<div>
-  login.html
+<div layout="colum" class="login-page">
+  <md-content md-theme="docs-dark" layout="row" layout-align="center center" flex>
+    <form name="loginForm" class="login-form" layout="column">
+      <md-content layout="column">
+        <img src="images/logo.png" class="login-logo" />
+        <md-input-container class="login-username">
+          <label>Username:</label>
+          <input ng-model="loginController.username" name="username" required />
+        </md-input-container>
+        <md-input-container class="login-password">
+          <label>Password:</label>
+          <input ng-model="loginController.password" name="password" required />
+        </md-input-container>
+        <md-button class="md-raised login-button" ng-click="" flex>Login</md-button>
+      </md-content>
+    </form>
+  </md-content>
 </div>

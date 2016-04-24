@@ -1,4 +1,44 @@
 .comApp {
 
+  // global values:
+  $loginFormWidth: 300px !default;
+
+  .page-view {
+    height: 100%;
+  }
+
+  .login-page {
+    height: 100%;
+
+    form {
+      &.login-form {
+        width: $loginFormWidth;
+      }
+    }
+
+    button {
+      &.login-button {
+        padding: 0px;
+        margin:  0px;
+        margin-top: 18px;
+      }
+    }
+
+    img {
+      &.login-logo {
+        width: $loginFormWidth;
+        margin-bottom: 18px;
+      }
+    }
+
+    md-input-container {
+      &.login-username {
+        //margin-bottom: 0px;
+      }
+      &.login-password {
+        margin-top: 0px;
+      }
+    }
+  }
 
 }

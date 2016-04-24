@@ -11,7 +11,8 @@ angular.module('comApp', [
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ngMaterial'
   ])
   .config(($routeProvider:ng.route.IRouteProvider) => {
     $routeProvider
