@@ -3,7 +3,7 @@
 
 'use strict';
 
-angular.module('comAppApp', [
+angular.module('comApp', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
@@ -17,12 +17,11 @@ angular.module('comAppApp', [
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: comApp.controllerName
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+      .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: comApp.controllerName
       })
       .otherwise({
         redirectTo: '/'

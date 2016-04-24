@@ -1,21 +1,21 @@
 /// <reference path="../../../typings/angularjs/angular-mocks.d.ts" />
 /// <reference path="../../../typings/jasmine/jasmine.d.ts" />
-/// <reference path="../../../app/scripts/controllers/main.ts" />
+/// <reference path="../../../app/scripts/controllers/logincontroller.ts" />
 
 'use strict';
 
-describe('Controller: MainCtrl', () => {
+describe('Controller: LoginControllerCtrl', () => {
 
   // load the controller's module
   beforeEach(module('comAppApp'));
 
-  var MainCtrl: comAppApp.MainCtrl,
-    scope: comAppApp.IMainScope;
+  var LoginControllerCtrl: comAppApp.LoginControllerCtrl,
+    scope: comAppApp.ILoginControllerScope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(($controller: ng.IControllerService, $rootScope: ng.IRootScopeService) => {
     scope = <any>$rootScope.$new();
-    MainCtrl = $controller('MainCtrl', {
+    LoginControllerCtrl = $controller('LoginControllerCtrl', {
       $scope: scope
     });
   }));
