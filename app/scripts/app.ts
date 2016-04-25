@@ -15,7 +15,7 @@ angular.module('comApp', [
     'ngMaterial',
     'pascalprecht.translate'
   ])
-  .config(($routeProvider:ng.route.IRouteProvider) => {
+  .config(($routeProvider:ng.route.IRouteProvider, $translateProvider) => {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -23,9 +23,21 @@ angular.module('comApp', [
       })
       .when('/login', {
         templateUrl: 'views/login.html',
-        controller: comApp.controllerName
+        controller: 'il.comApp.login.controller'
       })
       .otherwise({
         redirectTo: '/'
       });
+    $translateProvider.useStaticFilesLoader({
+      prefix: '/locales/',
+      suffix: '.json'
+    });
+    $translateProvider.registerAvailableLanguageKeys(['en_US', 'zh_CN'], {
+        'en_US': 'en_US',
+        'zh_CN': 'zh_CN'
+      }
+    );
+    $translateProvider.preferredLanguage('en_US');
+    //$translateProvider.determinePreferredLanguage();
+    //$translateProvider.fallbackLanguage('en');
   });

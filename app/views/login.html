@@ -1,6 +1,19 @@
 <!-- login.html -->
-<div layout="colum" class="login-page">
-  <md-content md-theme="docs-dark" layout="row" layout-align="center center" flex>
+<div layout="column" class="login-page">
+  <md-menu md-position-mode="target-right target" class="login-menu-bar">
+    <md-button class="md-icon-button" ng-click="$mdOpenMenu($event)">
+      <md-icon md-menu-origin md-svg-src="../images/ic_language_white_24px.svg"></md-icon>
+    </md-button>
+    <md-menu-content width="2">
+      <md-menu-item>
+        <md-button ng-click="loginController.switchLanguage('en_US')">English | en_US</md-button>
+      </md-menu-item>
+      <md-menu-item>
+        <md-button ng-click="loginController.switchLanguage('zh_CN')">简体中文 | zh_CN</md-button>
+      </md-menu-item>
+    </md-menu-content>
+  </md-menu>
+  <md-content md-theme="docs-dark" layout="column" layout-align="center center" flex>
     <form name="loginForm" class="login-form" layout="column">
       <md-content layout="column">
         <img src="images/logo.png" class="login-logo" />
@@ -15,5 +28,6 @@
         <md-button class="md-raised login-button" ng-click="" translate="comApp.login.loginButton"></md-button>
       </md-content>
     </form>
+    <span class="login-copyright" translate="comApp.login.copyRight"></span>
   </md-content>
 </div>

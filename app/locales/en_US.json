@@ -4,7 +4,8 @@
     "login": {
       "username": "Username",
       "password": "Password",
-      "loginButton": "Login"
+      "loginButton": "Login",
+      "copyRight": "2015-2016 ivan's studio"
     }
   }
 }

@@ -3,7 +3,8 @@
     "login": {
       "username": "用户名",
       "password": "登录密码",
-      "loginButton": "登录"
+      "loginButton": "登录",
+      "copyRight": "2015-2016 ivan的工作室"
     }
   }
 }

@@ -15,28 +15,21 @@ module comApp {
     username: string;
     password: string;
 
-    constructor (private $scope: ILoginControllerScope) {
+    constructor (private $scope: ILoginControllerScope,
+                 private $translate: any) {
       this.$scope.loginController = this;
+    }
+
+    switchLanguage(language: string) {
+      this.$translate.use(language);
     }
   }
 }
 
 angular.module('comApp')
   .controller(comApp.controllerName, comApp.LoginController)
-  .config(($mdThemingProvider, $translateProvider) => {
+  .config(($mdThemingProvider) => {
     $mdThemingProvider.theme('docs-dark', 'default')
                       .primaryPalette('yellow')
                       .dark();
-    $translateProvider.useStaticFilesLoader({
-        prefix: '/locales/',
-        suffix: '.json'
-    });
-    $translateProvider.registerAvailableLanguageKeys(['en_US', 'zh_CN'], {
-        'en_US': 'en_US',
-        'zh_CN': 'zh_CN'
-      }
-    );
-    $translateProvider.preferredLanguage('zh_CN');
-    //$translateProvider.determinePreferredLanguage();
-    //$translateProvider.fallbackLanguage('en');
   });

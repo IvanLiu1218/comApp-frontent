@@ -24,6 +24,12 @@
       }
     }
 
+    span {
+      &.login-copyright {
+        padding-top: 36px;
+      }
+    }
+
     img {
       &.login-logo {
         width: $loginFormWidth;
@@ -37,6 +43,13 @@
       }
       &.login-password {
         margin-top: 0px;
+      }
+    }
+
+    md-menu {
+      &.login-menu-bar {
+        padding: 0px;
+        background-color: #424242;
       }
     }
   }
